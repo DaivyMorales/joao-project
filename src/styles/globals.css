@@ -7,17 +7,17 @@
 }
 
 .bg-box {
-  background-color: #ffffff;
-  background-image: linear-gradient(#ebebeb 0px, transparent 1px),
+  background-color: #F7FAFC;
+  background-image: linear-gradient(#F3F4F8 0px, transparent 1px),
     linear-gradient(to right, #ebebeb 0px, #ffffff 1px);
-  background-size: 74px 74px;
+  background-size: 52px 52px;
 }
 
 h1 {
-  @apply text-6xl font-black;
+  @apply text-6xl font-bold text-neutral-500 tracking-tighter;
 }
 
-button {
+/* button {
   background-color: black;
   outline-offset: -1px;
   color: #fff;
@@ -35,4 +35,12 @@ button {
     0 6px 16px rgba(12, 43, 100, 0.32),
     0 0 0 5px rgba(255, 255, 255, 0.81),
     0 0 0 6.3px rgba(0, 0, 0, 0.04);
+} */
+
+.button-call-to-action {
+  @apply flex min-w-[200px] items-center justify-center gap-2 rounded-full border-[1px] px-8 py-3 font-medium shadow-sm;
+}
+
+p {
+  @apply text-[15px] font-normal;
 }
