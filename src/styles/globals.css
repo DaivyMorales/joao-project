@@ -44,3 +44,13 @@ h1 {
 p {
   @apply text-[15px] font-normal;
 }
+
+
+.underline {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: purple;
+}
