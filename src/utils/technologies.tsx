@@ -17,3 +17,9 @@ export const allTechnologies = [
     label: "Back-end",
   },
 ];
+
+export const toolsTech = [
+    {
+        url: ""
+    }
+]
