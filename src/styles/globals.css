@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  background-color: #f9f9f9;
+  background-color: rgb(249, 249, 249);
 }
 
 .bg-box {
   background-color: #F7FAFC;
   background-image: linear-gradient(#F3F4F8 0px, transparent 1px),
     linear-gradient(to right, #ebebeb 0px, #ffffff 1px);
-  background-size: 52px 52px;
+  background-size: 58px 58px;
 }
 
 h1 {

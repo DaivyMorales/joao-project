@@ -3,6 +3,8 @@ import Image from "next/image";
 import { FaXTwitter } from "react-icons/fa6";
 import { LiaLaptopCodeSolid } from "react-icons/lia";
 import { LuHammer } from "react-icons/lu";
+import { FiGithub } from "react-icons/fi";
+import Link from "next/link";
 
 import { api } from "@/utils/api";
 import { useState } from "react";
@@ -13,14 +15,15 @@ import {
   toolsTech,
   Tech,
   frontTech,
-  backTech
+  backTech,
 } from "@/utils/technologies";
 
 export default function Home() {
   const [selectedTech, setSelectedTech] = useState(allTechnologies[0]);
+  console.log(selectedTech);
 
   return (
-    <div className="bg-box flex min-h-screen w-full flex-col items-center justify-start pb-20">
+    <div className="bg-box flex h-screen w-full flex-col items-center justify-start pb-20">
       <Image
         className=""
         src="/joao-laptop.svg"
@@ -87,67 +90,196 @@ export default function Home() {
           <div className="col-span-2 flex w-full items-center justify-center border-x-[1px] border-[#F3F4F8]">
             <div className="h-[100px] w-[2px] bg-neutral-200" />
           </div>
-          <div className="z-50 col-span-2 grid h-[600px] w-full grid-cols-3 border-[1px] border-[#F3F4F8]">
-            <nav className="col-span-3 flex items-center justify-center gap-3 ">
-              <ul className="flex items-center justify-between gap-4 rounded-full border-[1px] border-[#F3F4F8] border-[#F3F4F8] px-1">
-                {allTechnologies.map((item: Technologies) => (
-                  <li
-                    key={item.label}
-                    className="flex cursor-pointer items-center justify-center gap-2 rounded-full p-2 "
-                    onClick={() => setSelectedTech(item)}
-                  >
-                    {item === selectedTech ? (
-                      ""
-                    ) : (
-                      <p
-                        className={` flex items-center justify-center gap-2 text-[14px] font-light`}
-                      >
-                        {item.label}
-                      </p>
-                    )}
-                    {item === selectedTech ? (
-                      <motion.div
-                        className="flex items-center justify-center gap-2 rounded-full bg-black p-2 shadow-lg"
-                        layoutId="underline"
-                      >
+          <div className="z-50 col-span-2 flex w-full flex-col gap-10 border-[1px] border-[#F3F4F8] py-7 ">
+            <div className="col-span-3">
+              <nav className="col-span-3 flex items-center justify-center gap-3 p-3 ">
+                <ul className="flex items-center justify-between gap-4 rounded-full  border-[1px] border-[#F3F4F8] border-[#F3F4F8] p-1">
+                  {allTechnologies.map((item: Technologies) => (
+                    <li
+                      key={item.label}
+                      className="flex cursor-pointer items-center justify-center gap-2 rounded-full p-[1px]"
+                      onClick={() => setSelectedTech(item)}
+                    >
+                      {item === selectedTech ? (
+                        ""
+                      ) : (
                         <p
-                          className={`${item === selectedTech ? "text-white" : "text-black"} flex items-center justify-center gap-2 text-[14px] font-light`}
+                          className={` flex items-center justify-center gap-2 text-[14px] font-light p-1 `}
                         >
-                          {/* <{...item.icon} /> */}
-                          {item.label}
+                          {item.label === "Tools" && (
+                            <>
+                              <LuHammer size={15} />
+                              Tools
+                            </>
+                          )}
+                          {item.label === "Front-end" && (
+                            <>
+                              <LuBrush size={15} />
+                              Front-end
+                            </>
+                          )}
+                          {item.label === "Back-end" && (
+                            <>
+                              <LiaLaptopCodeSolid size={15} />
+                              Back-end
+                            </>
+                          )}
                         </p>
-                      </motion.div>
-                    ) : null}
-                  </li>
-                ))}
+                      )}
+                      {item === selectedTech ? (
+                        <motion.div
+                          className="flex items-center justify-center gap-2 rounded-full bg-black p-2 shadow-lg"
+                          layoutId="underline"
+                        >
+                          <p
+                            className={`${item === selectedTech ? "text-white" : "text-neutral-300"} flex items-center justify-center gap-2 text-[14px] font-light `}
+                          >
+                            {item.label === "Tools" && (
+                              <>
+                                <LuHammer size={15} />
+                                Tools
+                              </>
+                            )}
+                            {item.label === "Front-end" && (
+                              <>
+                                <LuBrush size={15} />
+                                Front-end
+                              </>
+                            )}
+                            {item.label === "Back-end" && (
+                              <>
+                                <LiaLaptopCodeSolid size={15} />
+                                Back-end
+                              </>
+                            )}
+                          </p>
+                        </motion.div>
+                      ) : null}
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
 
-                {/* <motion.li className="flex cursor-pointer items-center justify-center gap-2 rounded-full bg-black p-2 text-[14px] font-light text-white ">
-                  <LuHammer size={15} />
-                  Tools / Others
-                </motion.li>
+            <div className="grid w-full grid-cols-3">
+              {selectedTech?.label === "Tools" && (
+                <>
+                  {toolsTech.map((tool) => (
+                    <div className="flex h-[120px] items-center justify-center border-r-[1px]  border-[#F3F4F8]">
+                      <motion.img
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        src={tool.url}
+                        alt="technology picture"
+                        width={19}
+                        height={108}
+                        className="flex w-full items-center  justify-center"
+                      />
+                    </div>
+                  ))}
+                </>
+              )}
+              {selectedTech?.label === "Front-end" && (
+                <>
+                  {frontTech.map((tool) => (
+                    <div className="flex h-[120px] items-center justify-center border-r-[1px]  border-[#F3F4F8]">
+                      <motion.img
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        src={tool.url}
+                        alt="technology picture"
+                        className="flex w-full items-center justify-center"
+                      />
+                    </div>
+                  ))}
+                </>
+              )}
+              {selectedTech?.label === "Back-end" && (
+                <>
+                  {backTech.map((tool) => (
+                    <div className="flex h-[120px] items-center justify-center border-r-[1px]  border-[#F3F4F8]">
+                      <motion.img
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        src={tool.url}
+                        alt="technology picture"
+                        className="flex w-full items-center justify-center"
+                      />
+                    </div>
+                  ))}
+                </>
+              )}
 
-                <motion.li className="flex cursor-pointer items-center justify-center gap-2 rounded-full p-2 text-[14px] font-light ">
-                  <LuBrush size={15} /> Front-end
-                </motion.li>
-
-                <motion.li className="flex cursor-pointer items-center justify-center gap-2 rounded-full p-2 text-[14px] font-light ">
-                  <LiaLaptopCodeSolid size={20} />
-                  Back-end
-                </motion.li> */}
-              </ul>
-            </nav>
-
-            {frontTech.map((tool) => (
-              <div className="flex items-center justify-center border-r-[1px] border-[#F3F4F8]">
-                {
-                  <img
-                    src={tool.url}
-                    alt="technology picture"
-                    className="flex w-full items-center  justify-center"
-                  />
-                }
+              <div className="col-span-2 p-10">
+                {selectedTech?.label === "Tools" && (
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    Tools Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Et est alias sint quidem molestias, nisi consectetur
+                    repellendus dolorem reiciendis quaerat?
+                  </motion.p>
+                )}
+                {selectedTech?.label === "Front-end" && (
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    Frontend Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Et est alias sint quidem molestias, nisi consectetur
+                    repellendus dolorem reiciendis quaerat?
+                  </motion.p>
+                )}
+                {selectedTech?.label === "Back-end" && (
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    Backend Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Et est alias sint quidem molestias, nisi consectetur
+                    repellendus dolorem reiciendis quaerat?
+                  </motion.p>
+                )}
               </div>
-            ))}
+              {selectedTech?.label !== "Tools" && (
+                <div className="flex items-center justify-center">
+                  <Link
+                    href="https://github.com/DaivyMorales"
+                    className=" gap-3 rounded-full border-[1px] bg-white px-6 py-2 hover:bg-neutral-50"
+                  >
+                    {selectedTech?.label === "Front-end" && (
+                      <motion.span
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="flex items-center justify-center gap-3 text-[14px] font-medium "
+                      >
+                        {" "}
+                        {selectedTech?.label} code <FiGithub />
+                      </motion.span>
+                    )}
+                    {selectedTech?.label === "Back-end" && (
+                      <motion.span
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="flex items-center justify-center gap-3 text-[14px] font-medium "
+                      >
+                        {" "}
+                        {selectedTech?.label} code <FiGithub />
+                      </motion.span>
+                    )}
+                  </Link>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

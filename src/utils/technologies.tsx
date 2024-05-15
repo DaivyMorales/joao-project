@@ -11,7 +11,7 @@ export interface Tech {
 export const allTechnologies = [
   {
     icon: "LuHammer",
-    label: "Tools / Others",
+    label: "Tools",
   },
   {
     icon: "LuBrush",
