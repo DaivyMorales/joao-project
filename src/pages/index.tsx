@@ -17,6 +17,7 @@ import {
   frontTech,
   backTech,
 } from "@/utils/technologies";
+import Projects from "./components/Projects";
 
 export default function Home() {
   const [selectedTech, setSelectedTech] = useState(allTechnologies[0]);
@@ -60,7 +61,7 @@ export default function Home() {
           height={100}
           className="absolute left-0 top-0"
         /> */}
-        <div className="relative grid w-full grid-cols-2 bg-white sm:w-[750px]">
+        <div className="relative grid w-full grid-cols-2 bg-white sm:w-[900px]">
           <section className="z-50 col-span-2 flex w-full flex-col items-center justify-center gap-6 border-[1px] border-[#F3F4F8] bg-gradient-to-t from-neutral-50 p-10">
             <div className="flex flex-col items-center justify-center gap-2">
               <h1 className="text-center">
@@ -104,7 +105,7 @@ export default function Home() {
                         ""
                       ) : (
                         <p
-                          className={` flex items-center justify-center gap-2 text-[14px] font-light p-1 `}
+                          className={` flex items-center justify-center gap-2 p-1 text-[14px] font-light `}
                         >
                           {item.label === "Tools" && (
                             <>
@@ -281,6 +282,7 @@ export default function Home() {
               )}
             </div>
           </div>
+         <Projects/>
         </div>
       </div>
     </div>
