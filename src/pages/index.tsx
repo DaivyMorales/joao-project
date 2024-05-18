@@ -24,50 +24,27 @@ export default function Home() {
   console.log(selectedTech);
 
   return (
-    <div className="bg-box flex h-screen w-full flex-col items-center justify-start pb-20">
-      <Image
+    <div className="flex h-screen w-full flex-col items-center justify-center p-[43px] ">
+      <div className="bg-box-gradient flex h-full w-full items-center justify-center rounded-xl bg-red-500 to-white">
+        <h1 className="text-white">I'm Joao</h1>
+      </div>
+
+      {/* <Image
         className=""
         src="/joao-laptop.svg"
         alt="Joao Laptop Picture"
         width={230}
         height={230}
-      />
-      <div className="flex flex-col items-center justify-center bg-white">
-        {/* <Image
-          src="/react-glossy.svg"
-          alt="Next.js Image"
-          width={100}
-          height={100}
-          className="absolute right-[200px] top-[100px]"
-        />
-        <Image
-          src="/figma-glossy.svg"
-          alt="Next.js Image"
-          width={100}
-          height={100}
-          className="absolute bottom-[300px] left-[50px]"
-        />
-        <Image
-          src="/next-glossy.svg"
-          alt="Next.js Image"
-          width={100}
-          height={100}
-          className="absolute bottom-10 right-10"
-        />
-        <Image
-          src="/visual-glossy.svg"
-          alt="Next.js Image"
-          width={100}
-          height={100}
-          className="absolute left-0 top-0"
-        /> */}
-        <div className="relative grid w-full grid-cols-2 bg-white sm:w-[900px]">
+      /> */}
+      {/* <div className="flex bg-red-500 flex-col items-center justify-center"> */}
+
+      {/* <div className="relative grid w-full grid-cols-2 bg-blue-200 sm:w-[900px]">
           <section className="z-50 col-span-2 flex w-full flex-col items-center justify-center gap-6 border-[1px] border-[#F3F4F8] bg-gradient-to-t from-neutral-50 p-10">
             <div className="flex flex-col items-center justify-center gap-2">
-              <h1 className="text-center">
+              <h1 className="text-center text-4xl sm:text-6xl">
                 <span className="text-black">Hey, I am Joao! 👋🏽</span>
               </h1>
-              <p className="w-[430px] text-center text-neutral-600">
+              <p className=" text-center text-neutral-600 text-[14px]">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
                 dicta aliquam facere praesentium.{" "}
               </p>
@@ -283,8 +260,8 @@ export default function Home() {
             </div>
           </div>
          <Projects/>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </div>
   );
 }

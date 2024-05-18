@@ -3,14 +3,15 @@
 @tailwind utilities;
 
 :root {
-  background-color: rgb(249, 249, 249);
+  background-color: white
 }
 
-.bg-box {
-  background-color: #F7FAFC;
-  background-image: linear-gradient(#F3F4F8 0px, transparent 1px),
-    linear-gradient(to right, #ebebeb 0px, #ffffff 1px);
-  background-size: 58px 58px;
+.bg-box-gradient {
+  background: 
+    linear-gradient(#f4f4f4 0px, transparent 1px),
+    linear-gradient(to right, #f4f4f4 0px, #ffffff 1px),
+    linear-gradient(to bottom, #38bdf8, #ffffff);
+  background-size: 58px 58px, 58px 58px, auto;
 }
 
 h1 {
@@ -18,7 +19,7 @@ h1 {
 }
 
 h2 {
- @apply text-4xl font-semibold text-black tracking-tighter;
+ @apply text-3xl font-semibold text-black tracking-tighter sm:text-4xl;
 }
 
 /* button {
@@ -42,7 +43,7 @@ h2 {
 } */
 
 .button-call-to-action {
-  @apply flex min-w-[200px] items-center justify-center gap-2 rounded-full border-[1px] px-8 py-3 font-medium shadow-sm;
+  @apply flex min-w-[100px] items-center justify-center gap-2 rounded-full border-[1px] px-8 py-3 font-medium shadow-sm;
 }
 
 p {
