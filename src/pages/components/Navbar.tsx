@@ -9,9 +9,11 @@ function Navbar({ children }: NavbarProps) {
     <main className="w-full ">
       <header className="bg-neutral-50 p-4">
         <nav className="flex w-full justify-between px-12">
-          <h4 className="font-semibold text-xl">Joao</h4>
+          <h4 className="text-xl font-semibold">Joao</h4>
           <ul>
-            <li>Contact me</li>
+            <li>
+              <button className="flex min-w-[100px] items-center justify-center gap-2 rounded-full border-[1px] px-8 py-3 font-medium shadow-sm ">Contact me</button>
+            </li>
           </ul>
         </nav>
       </header>

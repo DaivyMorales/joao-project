@@ -38,7 +38,7 @@ export default function Home() {
       /> */}
       {/* <div className="flex bg-red-500 flex-col items-center justify-center"> */}
 
-      {/* <div className="relative grid w-full grid-cols-2 bg-blue-200 sm:w-[900px]">
+       {/* <div className="relative grid w-full grid-cols-2 bg-blue-200 sm:w-[900px]">
           <section className="z-50 col-span-2 flex w-full flex-col items-center justify-center gap-6 border-[1px] border-[#F3F4F8] bg-gradient-to-t from-neutral-50 p-10">
             <div className="flex flex-col items-center justify-center gap-2">
               <h1 className="text-center text-4xl sm:text-6xl">
