@@ -5,15 +5,12 @@ import { LiaLaptopCodeSolid } from "react-icons/lia";
 import { LuHammer } from "react-icons/lu";
 import { FiGithub } from "react-icons/fi";
 import Link from "next/link";
-
-import { api } from "@/utils/api";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Technologies,
   allTechnologies,
   toolsTech,
-  Tech,
   frontTech,
   backTech,
 } from "@/utils/technologies";
@@ -21,7 +18,6 @@ import Projects from "./components/Projects";
 
 export default function Home() {
   const [selectedTech, setSelectedTech] = useState(allTechnologies[0]);
-  console.log(selectedTech);
 
   return (
     <div className="flex h-screen w-full flex-col items-center justify-center p-[43px] ">
@@ -46,7 +42,7 @@ export default function Home() {
               </h1>
               <p className=" text-center text-neutral-600 text-[14px]">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-                dicta aliquam facere praesentium.{" "}
+                dicta aliquam facere praesentium.
               </p>
             </div>
             <div className="flex w-full items-center justify-center gap-4">
