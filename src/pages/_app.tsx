@@ -8,7 +8,7 @@ import { api } from "@/utils/api";
 import "@/styles/globals.css";
 import Navbar from "./components/Navbar";
 
-const bricolage = Bricolage_Grotesque({
+const inter = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-sans",
 });
@@ -19,7 +19,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
 }) => {
   return (
     <SessionProvider session={session}>
-      <main className={`font-sans ${bricolage.variable}`}>
+      <main className={`font-sans ${inter.variable}`}>
         <Navbar>
           <Component {...pageProps} />
         </Navbar>

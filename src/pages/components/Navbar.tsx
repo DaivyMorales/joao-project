@@ -7,7 +7,7 @@ interface NavbarProps {
 function Navbar({ children }: NavbarProps) {
   return (
     <main className="w-full ">
-      <header className="bg-neutral-50 p-4">
+      {/* <header className="bg-neutral-50 p-4">
         <nav className="flex w-full justify-between px-12">
           <h4 className="text-xl font-semibold">Joao</h4>
           <ul>
@@ -16,7 +16,7 @@ function Navbar({ children }: NavbarProps) {
             </li>
           </ul>
         </nav>
-      </header>
+      </header> */}
 
       <div>{children}</div>
     </main>

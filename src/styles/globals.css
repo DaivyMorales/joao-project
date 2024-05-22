@@ -43,7 +43,7 @@ h2 {
 } */
 
 .button-call-to-action {
-  @apply flex min-w-[100px] items-center justify-center gap-2 rounded-full border-[1px] px-8 py-3 font-medium shadow-sm;
+  @apply flex min-w-[120px] text-[14px] items-center justify-center gap-2 rounded-lg border-[1px] px-6 py-2 font-normal ;
 }
 
 p {
