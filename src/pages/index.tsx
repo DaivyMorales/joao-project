@@ -8,7 +8,7 @@ import { FaXTwitter } from "react-icons/fa6";
 // import { FiGithub } from "react-icons/fi";
 // import Link from "next/link";
 // import { useState } from "react";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 // import {
 //   Technologies,
 //   allTechnologies,
@@ -268,16 +268,19 @@ import React from "react";
 
 function index() {
   return (
-    <main className="flex w-full flex-col items-center justify-center">
-      <section className="relative flex h-screen w-full items-start justify-center">
-        <div className="w-[500px] flex flex-col items-start justify-center gap-5 p-4">
-          <h1 className="text-center text-4xl font-black text-black lg:text-5xl">
-            Hi, I'm Joao, rapidly build <span className="text-[#FF4732]">modern websites without</span>
-          </h1>
-          <p className="text-center font-normal">
-            A utility-first CSS framework packed with 🌎 classes like flex, 🔥 pt-4,
-            text-center and  rotate-90.
-          </p>
+    <main className="flex w-full flex-col items-center justify-center p-2 lg:p-7">
+      <section className="relative flex h-screen w-full items-start justify-center rounded-xl bg-gradient-to-t from-red-200 to-white">
+        <div className="mt-5 flex  flex-col items-center justify-center gap-5 p-4">
+          <div className="max-w-[500px]">
+            <h1 className="text-center text-4xl font-black text-black lg:text-5xl">
+              Hi, I'm Joao, rapidly build{" "}
+              <span className="text-[#FF4732]">modern websites without</span>
+            </h1>
+            <p className="text-center font-normal">
+              A utility-first CSS framework packed with 🌎 classes like flex, 🔥
+              pt-4, text-center and rotate-90.
+            </p>
+          </div>
           <div className="flex w-full items-center justify-center gap-2 ">
             <button className="button-call-to-action border-[#FF4732] bg-[#FF7262] text-white">
               Contact now
@@ -287,9 +290,18 @@ function index() {
             </button>
           </div>
 
-          <div className="w-full flex gap-2 items-center justify-center  flex-col">
-            <p className="text-neutral-400 text-[12px] font-medium">My actual tech stack with +20 technologies</p>
-            <div className="flex  items-center justify-center gap-4">
+          <div className="flex w-full flex-col items-center justify-center gap-2">
+            <p className="text-[12px] font-medium text-red-300">
+              My actual tech stack with +20 technologies
+            </p>
+            <div className="flex items-center justify-center gap-2">
+              
+              <Image
+                src="/stack_icons/reactjs.svg"
+                alt="Icon"
+                width={34}
+                height={34}
+              />
               <Image
                 src="/stack_icons/nextjs.svg"
                 alt="Icon"
@@ -297,51 +309,47 @@ function index() {
                 height={34}
               />
               <Image
-                src="/stack_icons/reactjs.svg"
+                src="/stack_icons/tailwind.svg"
                 alt="Icon"
-                width={30}
-                height={26}
+                width={34}
+                height={34}
               />
               <Image
                 src="/stack_icons/ts.svg"
                 alt="Icon"
-                width={30}
-                height={30}
+                width={34}
+                height={34}
               />
-              <Image
-                src="/stack_icons/tailwind.svg"
-                alt="Icon"
-                width={33}
-                height={33}
-              />
+
               <Image
                 src="/stack_icons/prisma.svg"
                 alt="Icon"
-                width={23}
-                height={28}
+                width={34}
+                height={34}
               />
               <Image
                 src="/stack_icons/trpc.svg"
                 alt="Icon"
-                width={27}
-                height={32}
+                width={34}
+                height={34}
               />
             </div>
           </div>
+          <div className="flex w-full items-center justify-center ">
+            <Image
+              alt="Image"
+              width={930.19}
+              height={545.38}
+              src="/MacbookPro.png"
+              quality={100}
+            />
+          </div>
         </div>
-        <div className="absolute -bottom-[100px] flex items-center justify-center p-5 md:-bottom-[300px]">
-          <Image
-            alt="Image"
-            width={930.19}
-            height={545.38}
-            src="/MacbookPro.png"
-          />
-        </div>
+      </section>
 
-        {/* <button className="rounded-lg bg-[#FF7262] p-3 text-[14px] font-semibold text-white">
+      {/* <button className="rounded-lg bg-[#FF7262] p-3 text-[14px] font-semibold text-white">
         Contact now
       </button> */}
-      </section>
       <section className="grid h-screen w-full grid-cols-2"></section>
     </main>
   );
