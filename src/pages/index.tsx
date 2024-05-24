@@ -268,11 +268,12 @@ import React from "react";
 
 function index() {
   return (
-    <main className="flex w-full flex-col items-center justify-center p-2 lg:p-7">
-      <section className="relative flex h-screen w-full items-start justify-center rounded-xl bg-gradient-to-t from-red-200 to-white">
-        <div className="mt-5 flex  flex-col items-center justify-center gap-5 p-4">
-          <div className="max-w-[500px]">
-            <h1 className="text-center text-4xl font-black text-black lg:text-5xl">
+    <main className="relative flex w-full flex-col items-center justify-center p-2 z-10 lg:p-7">
+      <img src="/background.svg" alt="" className="absolute top-0 right-0 w-full h-screen" />
+      <section className="relative flex h-screen w-full items-start justify-center rounded-xl ">
+        <div className="mt-5 flex  flex-col items-center justify-center gap-9 p-4">
+          <div className="max-w-[500px] flex flex-col justify-center items-center gap-3">
+            <h1 className="text-center text-[40px] font-black text-black lg:text-5xl">
               Hi, I'm Joao, rapidly build{" "}
               <span className="text-[#FF4732]">modern websites without</span>
             </h1>
@@ -282,10 +283,10 @@ function index() {
             </p>
           </div>
           <div className="flex w-full items-center justify-center gap-2 ">
-            <button className="button-call-to-action border-[#FF4732] bg-[#FF7262] text-white">
+            <button className="button-call-to-action text-[14px] border-[#FF4732] bg-[#FF7262] text-white">
               Contact now
             </button>
-            <button className="button-call-to-action bg-white">
+            <button className="button-call-to-action text-[14px] bg-white">
               <FaXTwitter /> Twitter
             </button>
           </div>

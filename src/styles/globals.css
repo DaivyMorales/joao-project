@@ -59,3 +59,12 @@ p {
   height: 1px;
   background: purple;
 }
+
+.modern-gradient {
+  background-image: 
+    conic-gradient(
+      from 313deg at 50% 100% in oklab,
+      #fff 0%, 2%, rgb(100% 0% 0%) 0% 0%, 8%, #fff 0% 0%, 13%, #f00 0% 0%, 18%, #fff 0% 0%, 21%, #f00 0% 0%, 24%, #fff 0% 0%
+    )
+  ;
+}
