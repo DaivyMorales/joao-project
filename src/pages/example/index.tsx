@@ -64,7 +64,7 @@ export default function Example() {
         )}
       </AnimatePresence>
       <div className="btn-container">
-        <button onClick={cycleOpen}>{open ? "Close" : "Open"}</button>
+        {/* <button onClick={cycleOpen}>{open ? "Close" : "Open"}</button> */}
       </div>
     </main>
   );
