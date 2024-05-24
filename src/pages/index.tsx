@@ -328,7 +328,7 @@ function index() {
                 height={34}
               />
               <Image
-                src="/stack_icons/trpc.svg"
+                src="/stack_icons/supabase.svg"
                 alt="Icon"
                 width={34}
                 height={34}
