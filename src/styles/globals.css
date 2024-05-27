@@ -19,7 +19,7 @@ h1 {
 }
 
 h2 {
- @apply text-3xl font-semibold text-black tracking-tighter sm:text-4xl;
+ @apply text-4xl font-semibold text-black tracking-tighter ;
 }
 
 /* button {
@@ -47,7 +47,7 @@ h2 {
 }
 
 p {
-  @apply text-[15px] font-normal;
+  @apply text-[15px] font-light;
 }
 
 

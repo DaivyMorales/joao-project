@@ -265,38 +265,41 @@ import { motion } from "framer-motion";
 // }
 
 import React from "react";
+import ProjectsSection from "./components/ProjectsSection";
 
 function index() {
   return (
-    <main className="relative flex w-full flex-col items-center justify-center p-2 z-10 lg:p-7">
-      <img src="/background.svg" alt="" className="absolute top-0 right-0 w-full h-screen" />
+    <main className="relative z-10 flex w-full flex-col items-center justify-center p-2 lg:px-[120px]">
+      <img
+        src="/background.svg"
+        alt=""
+        className="absolute right-0 top-0 h-screen w-full"
+      />
       <section className="relative flex h-screen w-full items-start justify-center rounded-xl ">
         <div className="mt-5 flex  flex-col items-center justify-center gap-9 p-4">
-          <div className="max-w-[500px] flex flex-col justify-center items-center gap-3">
+          <div className="flex max-w-[500px] flex-col items-center justify-center gap-3">
             <h1 className="text-center text-[40px] font-black text-black lg:text-5xl">
-              Hi, I'm Joao, rapidly build{" "}
-              <span className="text-[#FF4732]">modern websites without</span>
+              Hi, I'm Joao, full stack web developer
+              <span className="text-[#FF4732]"> building web products</span>
             </h1>
             <p className="text-center font-normal">
-              A utility-first CSS framework packed with 🌎 classes like flex, 🔥
-              pt-4, text-center and rotate-90.
+              Learn more about my work and what I love. From Colombia to the
+              world 🌎, loving the creation of startups 🔥
             </p>
           </div>
           <div className="flex w-full items-center justify-center gap-2 ">
-            <button className="button-call-to-action text-[14px] border-[#FF4732] bg-[#FF7262] text-white">
+            <button className="button-call-to-action border-[#FF4732] bg-[#FF7262] text-[14px] text-white">
               Contact now
             </button>
-            <button className="button-call-to-action text-[14px] bg-white">
+            <button className="button-call-to-action bg-white text-[14px]">
               <FaXTwitter /> Twitter
             </button>
           </div>
-
           <div className="flex w-full flex-col items-center justify-center gap-2">
             <p className="text-[12px] font-medium text-red-300">
               My actual tech stack with +20 technologies
             </p>
             <div className="flex items-center justify-center gap-2">
-              
               <Image
                 src="/stack_icons/reactjs.svg"
                 alt="Icon"
@@ -341,7 +344,7 @@ function index() {
               alt="Image"
               width={930.19}
               height={545.38}
-              src="/MacbookPro.png"
+              src="/MacBookAir.svg"
               quality={100}
             />
           </div>
@@ -351,7 +354,7 @@ function index() {
       {/* <button className="rounded-lg bg-[#FF7262] p-3 text-[14px] font-semibold text-white">
         Contact now
       </button> */}
-      <section className="grid h-screen w-full grid-cols-2"></section>
+      <ProjectsSection />
     </main>
   );
 }
