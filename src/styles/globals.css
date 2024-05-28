@@ -22,6 +22,10 @@ h2 {
  @apply text-4xl font-semibold text-black tracking-tighter ;
 }
 
+h3 {
+ @apply text-[18px] font-semibold text-black tracking-tighter ;
+}
+
 /* button {
   background-color: black;
   outline-offset: -1px;

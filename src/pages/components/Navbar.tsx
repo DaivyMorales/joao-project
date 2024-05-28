@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import Image from "next/image";
+import ProjectDetail from "./ProjectDetail";
 
 interface NavbarProps {
   children: ReactNode;
@@ -7,10 +8,11 @@ interface NavbarProps {
 
 function Navbar({ children }: NavbarProps) {
   return (
-    <main className="w-full">
-      <header className="sticky top-0 z-50">
-        <nav className="h-[64px] sticky top-0 flex w-full items-center backdrop-blur backdrop-saturate-200 justify-between  border-neutral-100 px-12 z-50 lg:px-[120px]">
-         <h3 className="text-black font-bold">Joaoproject</h3>
+    <main className="relative w-full">
+      <ProjectDetail />
+      <header className="sticky top-0 z-40">
+        <nav className="sticky top-0 z-50 flex h-[64px] w-full items-center justify-between border-neutral-100  px-12 bg-white lg:px-[120px]">
+          <h3 className="font-bold text-black">Joaoproject</h3>
           <ul>
             <li>
               <button className=" flex items-center justify-center gap-2 rounded-lg border-[1px] border-[#FF4732] bg-[#FF7262] px-3 py-1 text-[10px] font-normal text-white ">
