@@ -26,25 +26,6 @@ h3 {
  @apply text-[18px] font-semibold text-black tracking-tighter ;
 }
 
-/* button {
-  background-color: black;
-  outline-offset: -1px;
-  color: #fff;
-  border-radius: 0.5rem;
-  outline: 1px solid rgba(255, 255, 255, 0.34);
-  padding: 0.9rem 1.7rem;
-  font-size: 0.95rem;
-  font-weight: 500;
-  line-height: 1.25rem;
-  transition: all 0.2s;
-  overflow: hidden;
-  box-shadow:
-    0 0 0 1px black,
-    0 1px 2px rgba(12, 43, 100, 0.32),
-    0 6px 16px rgba(12, 43, 100, 0.32),
-    0 0 0 5px rgba(255, 255, 255, 0.81),
-    0 0 0 6.3px rgba(0, 0, 0, 0.04);
-} */
 
 .button-call-to-action {
   @apply flex min-w-[120px] text-[14px] items-center justify-center gap-2 rounded-lg border-[1px] px-6 py-2 font-normal ;
