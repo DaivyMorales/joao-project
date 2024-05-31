@@ -279,7 +279,7 @@ function index() {
         <div className="mt-5 flex  flex-col items-center justify-center gap-9 p-4">
           <div className="flex max-w-[500px] flex-col items-center justify-center gap-3">
             <h1 className="text-center text-[40px] font-black text-black lg:text-5xl">
-              Hi, I'm Joao, full stack web developer
+              Hi, I'm Daivy, full stack web developer
               <span className="text-[#FF4732]"> building web products</span>
             </h1>
             <p className="text-center font-normal">
